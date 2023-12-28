@@ -4,6 +4,7 @@ const { validate } = require('../util/install.js');
 const { setup } = require('../util/directory.js');
 
 // This is where all requests to WordPress are routed through. See vercel.json or netlify.toml for the redirection rules.
+export const runtime = 'edge'; // 'nodejs' is the default
 exports.handler = async function (event, context, callback) {
     // Move the /wp directory to /tmp/wp so that it is writeable.
     setup();
