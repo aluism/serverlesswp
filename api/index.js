@@ -1,3 +1,5 @@
+export const runtime = 'edge'; // 'nodejs' is the default
+
 const serverlesswp = require('serverlesswp');
 
 const { validate } = require('../util/install.js');
@@ -21,5 +23,3 @@ exports.handler = async function (event, context, callback) {
         return response;
     }
 }
-
-export const runtime = 'edge'; // 'nodejs' is the default
